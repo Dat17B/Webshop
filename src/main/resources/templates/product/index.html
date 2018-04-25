@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Products List</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Title</th>
+            <th>Product Quantity</th>
+            <th>Product Price</th>
+            <th>Product webshop ID</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.title}"></td>
+            <td th:text="${product.quantity}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.webshopId}"></td>
+        </tr>
+    </table>
+</body>
+</html>
